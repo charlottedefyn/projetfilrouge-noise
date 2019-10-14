@@ -1,0 +1,27 @@
+<div>
+  <a routerLink="/article/new" class="btn btn-primary">nouvel article</a>
+</div>
+
+<div>
+  <article *ngFor="let article of articles">
+      <h2>
+          <a [routerLink]="['/article', article._id]">{{ article.title }}</a>
+      </h2>
+      <p>{{ article.contains }}</p>
+      <hr>
+
+
+      <button class="btn btn-danger" (click)= "onClickDelete(article)" >Supprimer</button>
+      &nbsp;
+      <button class="btn btn-warning"
+      (click)="onClickUpdate(article)">
+             Mis a jour
+      </button>
+  </article>
+
+  <button
+    class="btn btn-primary" (click)="onClickHome()" routerLinkActive="active">
+    <a routerLink="/">Back</a>
+  </button>
+
+</div>

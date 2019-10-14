@@ -1,0 +1,14 @@
+body {
+  margin: 0; padding: 0;
+}
+
+header {
+  margin: 0; padding: 0;
+}
+
+#carousel-item{
+  max-height: 500px;
+}
+#navbar {
+  margin: 0; padding: 0;
+}

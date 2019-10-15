@@ -1,9 +1,13 @@
-<div>
-  <a routerLink="/article/new" class="btn btn-primary">nouvel article</a>
-</div>
 
-<div>
-  <article *ngFor="let article of articles">
+
+<div class="container col-7">
+
+  <div class="button new ">
+    <a routerLink="/article/new" class="btn btn-primary">nouvel article</a>
+  </div>
+
+  <div>
+    <article *ngFor="let article of articles">
       <h2>
           <a [routerLink]="['/article', article._id]">{{ article.title }}</a>
       </h2>
@@ -17,11 +21,12 @@
       (click)="onClickUpdate(article)">
              Mis a jour
       </button>
-  </article>
+    </article>
 
-  <button
-    class="btn btn-primary" (click)="onClickHome()" routerLinkActive="active">
-    <a routerLink="/">Back</a>
-  </button>
+    <button
+      class="btn btn-primary" (click)="onClickHome()" routerLinkActive="active">
+      <a routerLink="/">Back</a>
+    </button>
 
+  </div>
 </div>
